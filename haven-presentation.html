@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Haven Ventures | Website Prototype Presentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--alt:#F5F7FD;--tx:#14161c;--mu:#555b6b;--bl:#0B2DBA;--bd:#E2E6F2;--on:#fff;box-sizing:border-box}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d0f15;--alt:#13161f;--tx:#f2f4fa;--mu:#a2a9bc;--bl:#5C7BFF;--bd:#242a3a;--on:#0d0f15}}
+:root[data-theme="dark"]{--bg:#0d0f15;--alt:#13161f;--tx:#f2f4fa;--mu:#a2a9bc;--bl:#5C7BFF;--bd:#242a3a;--on:#0d0f15}
+*,*:before,*:after{box-sizing:inherit}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--tx);font:400 17px/1.6 Manrope,system-ui,Arial,sans-serif;overflow:hidden;padding-top:env(safe-area-inset-top,0px)}
+.logo{height:30px;position:absolute;top:calc(28px + env(safe-area-inset-top,0px));left:48px;z-index:3}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo{filter:brightness(1.8) saturate(.8)}}
+.s{position:absolute;inset:0;display:none;padding:96px 48px 110px;overflow:auto;background:var(--bg)}
+.s.on{display:block;animation:in .45s ease both}
+@keyframes in{from{opacity:0;transform:translateX(18px)}}
+.in{max-width:1080px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;justify-content:center;gap:34px}
+h1,h2,h3{margin:0;letter-spacing:-.025em;line-height:1.08}
+h1{font-size:clamp(40px,7vw,84px);font-weight:800}
+h2{font-size:clamp(30px,4.4vw,52px);font-weight:700}
+h3{font-size:18px;font-weight:700;letter-spacing:-.01em;color:var(--bl);margin-bottom:8px}
+p{margin:0;color:var(--mu)}.lead{font-size:clamp(18px,2vw,22px);max-width:34em}
+.g{display:grid;gap:18px}.c3{grid-template-columns:repeat(3,1fr)}.c2{grid-template-columns:repeat(2,1fr)}.c4{grid-template-columns:repeat(4,1fr)}
+.card{border:1px solid var(--bd);border-radius:14px;padding:24px;background:var(--alt)}
+.card p{font-size:15px}.card.b{background:var(--bl);border-color:var(--bl)}.card.b h3,.card.b p{color:var(--on)}
+.sw{display:flex;gap:10px;margin-top:12px}.sw i{width:40px;height:40px;border-radius:10px;border:1px solid var(--bd)}
+.map{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}
+.map div{border:1px solid var(--bl);border-radius:12px;padding:14px 18px;font-weight:600;color:var(--tx)}
+.map div:first-child{background:var(--bl);color:var(--on)}
+ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+li{padding-left:22px;position:relative;color:var(--mu);font-size:16px}li b{color:var(--tx)}
+li:before{content:"";position:absolute;left:0;top:.65em;width:8px;height:8px;border-radius:50%;background:var(--bl)}
+.hero:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(color-mix(in srgb,var(--bl) 28%,transparent) 1.2px,transparent 1.4px);background-size:24px 24px;-webkit-mask-image:radial-gradient(ellipse 55% 70% at 90% 10%,#000,transparent 75%);mask-image:radial-gradient(ellipse 55% 70% at 90% 10%,#000,transparent 75%)}
+.hero .in>*{position:relative}
+.bar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;padding:16px 48px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--bd);background:var(--bg);z-index:4}
+.bar span{color:var(--mu);font-size:14px;font-weight:600}
+button{font:inherit;font-weight:600;font-size:15px;padding:10px 22px;border-radius:10px;border:1.5px solid var(--bl);background:var(--bl);color:var(--on);cursor:pointer;transition:transform .2s}
+button.o{background:transparent;color:var(--bl)}button:hover{transform:translateY(-2px)}button:disabled{opacity:.35;cursor:default;transform:none}
+:focus-visible{outline:2px solid var(--bl);outline-offset:3px}
+a{color:var(--bl);font-weight:600}
+@media(max-width:800px){.s{padding:84px 22px 100px}.logo{left:22px}.bar{padding-left:22px;padding-right:22px}.c3,.c4,.c2,.map{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<img class="logo" src="__LOGO__" alt="Haven Ventures">
+
+<section class="s hero on"><div class="in"><h1>Haven Ventures<br>Website Prototype</h1><p class="lead">A walkthrough for the IT team: what was built, how it works, and what we need from IT to take it live.</p><p>Prototype link: <a href="tan-cosette-12.tiiny.site">tan-cosette-12.tiiny.site</a></p></div></section>
+
+<section class="s"><div class="in"><h2>The goal: win qualified client inquiries</h2><p class="lead">The site positions Haven as a managed business support partner, not a VA marketplace.</p>
+<div class="g c4"><div class="card b"><h3>People</h3><p>Trained, dependable professionals</p></div><div class="card"><h3>Process</h3><p>Structured onboarding and workflows</p></div><div class="card"><h3>Management</h3><p>Haven oversees quality</p></div><div class="card"><h3>Technology</h3><p>CRM, reporting, collaboration tools</p></div></div></div></section>
+
+<section class="s"><div class="in"><h2>Site structure</h2><p class="lead">Six pages, guiding a visitor from understanding Haven to submitting an inquiry.</p>
+<div class="map"><div>Home</div><div>Why Haven</div><div>Services</div><div>Our Team</div><div>Industries</div><div>Contact</div></div>
+<div class="g c3"><div class="card"><h3>Home</h3><p>Hero, About (mission, vision, values), services and process overview.</p></div><div class="card"><h3>Services</h3><p>Expandable categories plus the six-step managed process.</p></div><div class="card"><h3>Contact</h3><p>Lead-generation inquiry form, not just an email address.</p></div></div></div></section>
+
+<section class="s"><div class="in"><h2>Design system</h2>
+<div class="g c3"><div class="card"><h3>Color</h3><p>Blue, white and charcoal only.</p><div class="sw"><i style="background:#0B2DBA"></i><i style="background:#fff"></i><i style="background:#14161c"></i></div></div>
+<div class="card"><h3>Typography</h3><p>Manrope, a clean sans-serif, with large headlines and short paragraphs.</p></div>
+<div class="card"><h3>Components</h3><p>Bordered cards, line icons, expandable sections, subtle hover and entrance motion.</p></div></div>
+<div class="g c3"><div class="card"><h3>Responsive</h3><p>Desktop, tablet and mobile, with a hamburger menu.</p></div><div class="card"><h3>Dark mode</h3><p>Follows the visitor's device setting.</p></div><div class="card"><h3>Accessibility</h3><p>Keyboard focus states and reduced-motion support.</p></div></div></div></section>
+
+<section class="s"><div class="in"><h2>How it is built</h2>
+<div class="g c2"><div class="card"><h3>Current prototype</h3><ul><li><b>One HTML file</b> with inline CSS and JavaScript, no framework</li><li><b>Data-driven:</b> services, team, values and industries come from arrays, so edits are easy</li><li><b>Pages</b> switch with URL hashes such as #services</li><li><b>Only external call:</b> Google Fonts</li></ul></div>
+<div class="card"><h3>Not built yet</h3><ul><li>The inquiry form only shows the workflow; it sends nothing</li><li>Team photos are placeholders</li><li>Contact details are placeholders</li><li>No analytics, SEO setup or real separate URLs</li></ul></div></div></div></section>
+
+<section class="s"><div class="in"><h2>The inquiry form is the conversion point</h2><p class="lead">Fields are grouped as contact, business and support requirements, so each inquiry arrives qualified.</p>
+<div class="map" style="grid-template-columns:repeat(5,1fr)"><div>Inquiry Submitted</div><div style="background:none;color:var(--tx)">CRM</div><div style="background:none;color:var(--tx)">Internal Notification</div><div style="background:none;color:var(--tx)">Follow-Up</div><div style="background:none;color:var(--tx)">Discovery Call</div></div>
+<p>The visitor sees this flow after submitting. Connecting it to our real systems is the main IT task.</p></div></section>
+
+<section class="s"><div class="in"><h2>What we need from IT</h2>
+<div class="g c2"><div class="card"><h3>Go-live</h3><ul><li>Hosting and a domain</li><li>Real URLs for each page (/services, /contact)</li><li>HTTPS, performance and SEO basics</li></ul></div>
+<div class="card b"><h3>Inquiry pipeline</h3><ul style="--x:0"><li style="color:var(--on)">Form backend that stores each inquiry</li><li style="color:var(--on)">CRM connection and internal notification</li><li style="color:var(--on)">Spam protection and data privacy for submissions</li></ul></div></div>
+<p>Also open: analytics, final contact details and real team photos. Questions and feedback welcome.</p></div></section>
+
+<div class="bar"><button class="o" id="pv">Back</button><span id="ct"></span><button id="nx">Next</button></div>
+<script>
+const S=[...document.querySelectorAll(".s")];let i=0;
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle("on",k==i));document.getElementById("ct").textContent=(i+1)+" / "+S.length;document.getElementById("pv").disabled=i==0;document.getElementById("nx").disabled=i==S.length-1}
+pv.onclick=()=>go(i-1);nx.onclick=()=>go(i+1);
+addEventListener("keydown",e=>{if(e.key=="ArrowRight"||e.key==" ")go(i+1);if(e.key=="ArrowLeft")go(i-1)});
+go(0);
+</script></body></html>
