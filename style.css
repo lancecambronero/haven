@@ -971,3 +971,30 @@ svg.i {
     padding-top: 128px;
   }
 }
+
+/* HubSpot embedded contact form */
+.hubspot-form-container {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border: 1px solid var(--bd);
+  border-radius: 16px;
+  padding: 28px;
+  background: var(--bg);
+}
+
+/* Keep HubSpot's embed frame within the contact column */
+.hubspot-form-container .hs-form-frame,
+.hubspot-form-container iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* HubSpot renders the form in its own document, so these rules mainly
+   style the outer container. Customize field styles in HubSpot if needed. */
+@media (max-width: 600px) {
+  .hubspot-form-container {
+    padding: 18px;
+  }
+}
